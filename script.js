@@ -9,3 +9,7 @@ function updateTimer() {
 
             const formattedTime = `${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
             document.getElementById('timer').textContent = formattedTime;
+	}
+
+        setInterval(updateTimer, 1000); // Update the timer every second
+        updateTimer();
