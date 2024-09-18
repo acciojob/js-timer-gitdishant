@@ -1,11 +1,11 @@
 function updateTimer() {
             const now = new Date();
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const day = now.getDate();
+            const month = now.getMonth() + 1; // Months are zero-based
             const year = now.getFullYear();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
 
             const formattedTime = `${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
             document.getElementById('timer').textContent = formattedTime;
